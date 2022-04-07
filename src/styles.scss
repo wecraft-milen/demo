@@ -1,0 +1,36 @@
+/* You can add global styles to this file, and also import other style files */
+
+@use "sass:list";
+@use "sass:map";
+
+@use "@angular/material" as mat;
+
+@import "@angular/material/theming";
+
+@import "./scss/variables";
+@import "./scss/themes/light-theme";
+@import "./scss/themes/dark-theme";
+@import "./scss/themes/main";
+
+@include mat-core();
+
+@mixin themes($theme) {
+  @include angular-material-theme($theme);
+  @include main($theme);
+}
+
+.light-theme {
+  @include themes($my-light-theme);
+}
+.dark-theme {
+  @include themes($my-dark-theme);
+}
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+}

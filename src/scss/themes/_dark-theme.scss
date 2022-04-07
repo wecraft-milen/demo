@@ -1,0 +1,77 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+$color-contast: 200;
+
+$primary: mat.define-palette(mat.$grey-palette, $color-contast);
+$accent: mat.define-palette(mat.$grey-palette, $color-contast);
+$warn: mat.define-palette(mat.$grey-palette, $color-contast);
+
+$red: mat.define-palette(mat.$red-palette, $color-contast);
+$pink: mat.define-palette(mat.$pink-palette, $color-contast);
+$purple: mat.define-palette(mat.$purple-palette, $color-contast);
+$deep-purple: mat.define-palette(mat.$deep-purple-palette, $color-contast);
+$indigo: mat.define-palette(mat.$indigo-palette, $color-contast);
+$blue: mat.define-palette(mat.$blue-palette, $color-contast);
+$light-blue: mat.define-palette(mat.$light-blue-palette, $color-contast);
+$cyan: mat.define-palette(mat.$cyan-palette, $color-contast);
+$teal: mat.define-palette(mat.$teal-palette, $color-contast);
+$green: mat.define-palette(mat.$green-palette, $color-contast);
+$light-green: mat.define-palette(mat.$light-green-palette, $color-contast);
+$lime: mat.define-palette(mat.$lime-palette, $color-contast);
+$amber: mat.define-palette(mat.$amber-palette, $color-contast);
+$orange: mat.define-palette(mat.$orange-palette, $color-contast);
+$deep-orange: mat.define-palette(mat.$deep-orange-palette, $color-contast);
+$brown: mat.define-palette(mat.$brown-palette, $color-contast);
+
+$my-dark-theme: mat.define-dark-theme(
+  (
+    color: (
+      primary: $primary,
+      accent: $accent,
+      warn: $warn,
+    ),
+  )
+);
+
+$my-dark-theme: map-merge(
+  $my-dark-theme,
+  (
+    color:
+      map-merge(
+        map-get($my-dark-theme, color),
+        (
+          _red: $red,
+          _pink: $pink,
+          _purple: $purple,
+          _deep-purple: $deep-purple,
+          _indigo: $indigo,
+          _blue: $blue,
+          _light-blue: $light-blue,
+          _cyan: $cyan,
+          _teal: $teal,
+          _green: $green,
+          _light-green: $light-green,
+          _lime: $lime,
+          _amber: $amber,
+          _orange: $orange,
+          _deep-orange: $deep-orange,
+          _brown: $brown,
+        )
+      ),
+    foreground:
+      map-merge(
+        mat.$dark-theme-foreground-palette,
+        (
+          text: white,
+        )
+      ),
+    background:
+      map-merge(
+        mat.$dark-theme-background-palette,
+        (
+          background: #303030,
+        )
+      ),
+  )
+);
