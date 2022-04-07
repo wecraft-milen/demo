@@ -30,8 +30,8 @@
   $background: map.get($theme, background);
   $background: mat.get-color-from-palette($background, background);
 
-  background: $background;
-  color: foreground;
+  background-color: $background;
+  color: $foreground;
 
   .mat-red {
     background-color: mat-color($red);
