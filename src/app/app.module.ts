@@ -3,23 +3,29 @@ import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { MatIconModule, MatIconRegistry } from '@angular/material/icon';
 
 import { AppComponent } from './app.component';
 import { windowProvider, WindowToken } from './window';
+import { HttpClientModule } from '@angular/common/http';
+import { CustomIconService } from './custom-icon.service';
 
 @NgModule({
   declarations: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
+    HttpClientModule,
     MatButtonModule,
     MatSlideToggleModule,
+    MatIconModule,
   ],
   providers: [
     {
       provide: WindowToken,
       useFactory: windowProvider,
     },
+    { provide: MatIconRegistry, useClass: CustomIconService },
   ],
   bootstrap: [AppComponent],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
