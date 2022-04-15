@@ -41,7 +41,6 @@ export class AppComponent {
         )
       );
 
-    console.log(this.icon.getDefaultFontSetClass());
     this.icon.getNamedSvgIcon('pacman').subscribe(console.log);
   }
 }
