@@ -1,4 +1,6 @@
 @use "sass:map";
+@use "sass:color";
+@use "sass:string";
 @use "@angular/material" as mat;
 
 @mixin main($theme) {
@@ -33,68 +35,45 @@
   background-color: $background;
   color: $foreground;
 
-  .mat-red {
-    background-color: mat-color($red);
-    color: $background;
-  }
-  .mat-pink {
-    background-color: mat-color($pink);
-    color: $background;
-  }
-  .mat-purple {
-    background-color: mat-color($purple);
-    color: $background;
-  }
-  .mat-deep-purple {
-    background-color: mat-color($deep-purple);
-    color: $background;
-  }
-  .mat-indigo {
-    background-color: mat-color($indigo);
-    color: $background;
-  }
-  .mat-blue {
-    background-color: mat-color($blue);
-    color: $background;
-  }
-  .mat-light-blue {
-    background-color: mat-color($light-blue);
-    color: $background;
-  }
-  .mat-cyan {
-    background-color: mat-color($cyan);
-    color: $background;
-  }
-  .mat-teal {
-    background-color: mat-color($teal);
-    color: $background;
-  }
-  .mat-green {
-    background-color: mat-color($green);
-    color: $background;
-  }
-  .mat-light-green {
-    background-color: mat-color($light-green);
-    color: $background;
-  }
-  .mat-lime {
-    background-color: mat-color($lime);
-    color: $background;
-  }
-  .mat-amber {
-    background-color: mat-color($amber);
-    color: $background;
-  }
-  .mat-orange {
-    background-color: mat-color($orange);
-    color: $background;
-  }
-  .mat-deep-orange {
-    background-color: mat-color($deep-orange);
-    color: $background;
-  }
-  .mat-brown {
-    background-color: mat-color($brown);
-    color: $background;
+  $colors: (
+    red: mat-color($red),
+    pink: mat-color($pink),
+    purple: mat-color($purple),
+    deep-purple: mat-color($deep-purple),
+    indigo: mat-color($indigo),
+    blue: mat-color($blue),
+    light-blue: mat-color($light-blue),
+    cyan: mat-color($cyan),
+    teal: mat-color($teal),
+    green: mat-color($green),
+    light-green: mat-color($light-green),
+    lime: mat-color($lime),
+    amber: mat-color($amber),
+    orange: mat-color($orange),
+    deep-orange: mat-color($deep-orange),
+    brown: mat-color($brown),
+  );
+
+  @each $c, $v in $colors {
+    .mat-#{$c} {
+      &.mat-raised-button {
+        background-color: $v;
+        color: $background;
+      }
+
+      &.mat-button {
+        color: $v;
+      }
+
+      &.mat-slide-toggle.mat-checked {
+        .mat-slide-toggle-bar {
+          background: rgba($v, 0.54);
+        }
+
+        .mat-slide-toggle-thumb {
+          background-color: $v;
+        }
+      }
+    }
   }
 }

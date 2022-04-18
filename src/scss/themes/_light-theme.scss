@@ -3,9 +3,9 @@
 
 $color-contast: 800;
 
-$primary: mat.define-palette(mat.$grey-palette, $color-contast);
-$accent: mat.define-palette(mat.$grey-palette, $color-contast);
-$warn: mat.define-palette(mat.$grey-palette, $color-contast);
+$primary: mat.define-palette(mat.$indigo-palette, $color-contast);
+$accent: mat.define-palette(mat.$cyan-palette, $color-contast);
+$warn: mat.define-palette(mat.$red-palette, $color-contast);
 
 $red: mat.define-palette(mat.$red-palette, $color-contast);
 $pink: mat.define-palette(mat.$pink-palette, $color-contast);
