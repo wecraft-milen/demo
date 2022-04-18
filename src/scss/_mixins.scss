@@ -1,0 +1,100 @@
+@use "sass:map";
+@use "@angular/material" as mat;
+
+@mixin main($theme) {
+  $color: mat.get-color-from-palette($theme, color);
+  $primary: mat.get-color-from-palette($color, primary);
+  $accent: mat.get-color-from-palette($color, accent);
+  $warn: mat.get-color-from-palette($color, warn);
+
+  $red: mat.get-color-from-palette($color, _red);
+  $pink: mat.get-color-from-palette($color, _pink);
+  $purple: mat.get-color-from-palette($color, _purple);
+  $deep-purple: mat.get-color-from-palette($color, _deep-purple);
+  $indigo: mat.get-color-from-palette($color, _indigo);
+  $blue: mat.get-color-from-palette($color, _blue);
+  $light-blue: mat.get-color-from-palette($color, _light-blue);
+  $cyan: mat.get-color-from-palette($color, _cyan);
+  $teal: mat.get-color-from-palette($color, _teal);
+  $green: mat.get-color-from-palette($color, _green);
+  $light-green: mat.get-color-from-palette($color, _light-green);
+  $lime: mat.get-color-from-palette($color, _lime);
+  $amber: mat.get-color-from-palette($color, _amber);
+  $orange: mat.get-color-from-palette($color, _orange);
+  $deep-orange: mat.get-color-from-palette($color, _deep-orange);
+  $brown: mat.get-color-from-palette($color, _brown);
+
+  $foreground: map.get($theme, foreground);
+  $foreground: mat.get-color-from-palette($foreground, text);
+
+  $background: map.get($theme, background);
+  $background: mat.get-color-from-palette($background, background);
+
+  background-color: $background;
+  color: $foreground;
+
+  .mat-red {
+    background-color: mat-color($red);
+    color: $background;
+  }
+  .mat-pink {
+    background-color: mat-color($pink);
+    color: $background;
+  }
+  .mat-purple {
+    background-color: mat-color($purple);
+    color: $background;
+  }
+  .mat-deep-purple {
+    background-color: mat-color($deep-purple);
+    color: $background;
+  }
+  .mat-indigo {
+    background-color: mat-color($indigo);
+    color: $background;
+  }
+  .mat-blue {
+    background-color: mat-color($blue);
+    color: $background;
+  }
+  .mat-light-blue {
+    background-color: mat-color($light-blue);
+    color: $background;
+  }
+  .mat-cyan {
+    background-color: mat-color($cyan);
+    color: $background;
+  }
+  .mat-teal {
+    background-color: mat-color($teal);
+    color: $background;
+  }
+  .mat-green {
+    background-color: mat-color($green);
+    color: $background;
+  }
+  .mat-light-green {
+    background-color: mat-color($light-green);
+    color: $background;
+  }
+  .mat-lime {
+    background-color: mat-color($lime);
+    color: $background;
+  }
+  .mat-amber {
+    background-color: mat-color($amber);
+    color: $background;
+  }
+  .mat-orange {
+    background-color: mat-color($orange);
+    color: $background;
+  }
+  .mat-deep-orange {
+    background-color: mat-color($deep-orange);
+    color: $background;
+  }
+  .mat-brown {
+    background-color: mat-color($brown);
+    color: $background;
+  }
+}

@@ -2,15 +2,15 @@
 
 @use "sass:list";
 @use "sass:map";
-
 @use "@angular/material" as mat;
 
 @import "@angular/material/theming";
 
 @import "./scss/variables";
+@import "./scss/mixins";
+
 @import "./scss/themes/light-theme";
 @import "./scss/themes/dark-theme";
-@import "./scss/themes/main";
 
 @import "./assets/icomoon-font/style.css";
 
