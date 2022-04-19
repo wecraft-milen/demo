@@ -61,6 +61,14 @@
         color: $background;
       }
 
+      &.mat-stroked-button {
+        color: $v;
+      }
+
+      &.mat-stroked-button {
+        border-color: rgba($v, 0.12);
+      }
+
       &.mat-button {
         color: $v;
       }

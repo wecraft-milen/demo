@@ -1,7 +1,7 @@
 <div>
   <button mat-raised-button (click)="changeTheme()">{{isDark ? 'dark' : 'light'}}</button>
   <hr>
-  <div style="display: flex; flex-wrap: wrap;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
     <button mat-raised-button>Basic</button>
     <button mat-raised-button color="primary">primary</button>
     <button mat-raised-button color="accent">accent</button>
@@ -22,9 +22,10 @@
     <button mat-raised-button color="orange">orange</button>
     <button mat-raised-button color="deep-orange">deep-orange</button>
     <button mat-raised-button color="brown">brown</button>
+    <button mat-raised-button color="brown" disabled>disabled</button>
   </div>
   <hr>
-  <div style="display: flex; flex-wrap: wrap;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
     <button mat-button>Basic</button>
     <button mat-button color="primary">primary</button>
     <button mat-button color="accent">accent</button>
@@ -45,9 +46,10 @@
     <button mat-button color="orange">orange</button>
     <button mat-button color="deep-orange">deep-orange</button>
     <button mat-button color="brown">brown</button>
+    <button mat-button color="brown" disabled>disabled</button>
   </div>
   <hr>
-  <div style="display: flex; flex-wrap: wrap;">
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
     <mat-slide-toggle color="primary" checked="true">primary</mat-slide-toggle>
     <mat-slide-toggle color="accent" checked="true">accent</mat-slide-toggle>
     <mat-slide-toggle color="warn" checked="true">warn</mat-slide-toggle>
@@ -67,6 +69,31 @@
     <mat-slide-toggle checked="true" color="orange">orange</mat-slide-toggle>
     <mat-slide-toggle checked="true" color="deep-orange">deep-orange</mat-slide-toggle>
     <mat-slide-toggle checked="true" color="brown">brown</mat-slide-toggle>
+    <mat-slide-toggle disabled="true" checked="true" color="brown">disabled</mat-slide-toggle>
+  </div>
+  <hr>
+  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+    <button mat-stroked-button>Basic</button>
+    <button mat-stroked-button color="primary">primary</button>
+    <button mat-stroked-button color="accent">accent</button>
+    <button mat-stroked-button color="warn">warn</button>
+    <button mat-stroked-button color="red">red</button>
+    <button mat-stroked-button color="pink">pink</button>
+    <button mat-stroked-button color="purple">purple</button>
+    <button mat-stroked-button color="deep-purple">deep-purple</button>
+    <button mat-stroked-button color="indigo">indigo</button>
+    <button mat-stroked-button color="blue">blue</button>
+    <button mat-stroked-button color="light-blue">light-blue</button>
+    <button mat-stroked-button color="cyan">cyan</button>
+    <button mat-stroked-button color="teal">teal</button>
+    <button mat-stroked-button color="green">green</button>
+    <button mat-stroked-button color="light-green">light-green</button>
+    <button mat-stroked-button color="lime">lime</button>
+    <button mat-stroked-button color="amber">amber</button>
+    <button mat-stroked-button color="orange">orange</button>
+    <button mat-stroked-button color="deep-orange">deep-orange</button>
+    <button mat-stroked-button color="brown">brown</button>
+    <button mat-stroked-button color="brown" disabled>disabled</button>
   </div>
   <hr>
   <div style="display: flex; align-items: center; justify-content: center; flex-direction: column;">
