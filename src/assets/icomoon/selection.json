@@ -4,6 +4,35 @@
     {
       "icon": {
         "paths": [
+          "M288 576h-64v448h64c17.6 0 32-14.4 32-32v-384c0-17.6-14.4-32-32-32z",
+          "M736 576c-17.602 0-32 14.4-32 32v384c0 17.6 14.398 32 32 32h64v-448h-64z",
+          "M1024 512c0-282.77-229.23-512-512-512s-512 229.23-512 512c0 61.412 10.83 120.29 30.656 174.848-19.478 33.206-30.656 71.87-30.656 113.152 0 112.846 83.448 206.188 192 221.716v-443.418c-31.914 4.566-61.664 15.842-87.754 32.378-5.392-26.718-8.246-54.364-8.246-82.676 0-229.75 186.25-416 416-416s416 186.25 416 416c0 28.314-2.83 55.968-8.22 82.696-26.1-16.546-55.854-27.848-87.78-32.418v443.44c108.548-15.532 192-108.874 192-221.714 0-41.274-11.178-79.934-30.648-113.138 19.828-54.566 30.648-113.452 30.648-174.866z"
+        ],
+        "tags": [
+          "headphones",
+          "headset",
+          "music",
+          "audio"
+        ],
+        "defaultCode": 59664,
+        "grid": 16,
+        "attrs": []
+      },
+      "attrs": [],
+      "properties": {
+        "ligatures": "headphones, headset",
+        "name": "headphones",
+        "order": 5,
+        "id": 17,
+        "prevSize": 32
+      },
+      "setIdx": 0,
+      "setId": 1,
+      "iconIdx": 16
+    },
+    {
+      "icon": {
+        "paths": [
           "M964.73 178.804c-93.902-109.45-233.21-178.804-388.73-178.804-282.77 0-512 229.23-512 512s229.23 512 512 512c155.52 0 294.828-69.356 388.728-178.804l-324.728-333.196 324.73-333.196zM704 120.602c39.432 0 71.398 31.964 71.398 71.398 0 39.432-31.966 71.398-71.398 71.398s-71.398-31.966-71.398-71.398c0-39.432 31.966-71.398 71.398-71.398z"
         ],
         "tags": [
@@ -19,10 +48,9 @@
       "properties": {
         "ligatures": "pacman, game2",
         "name": "pacman",
-        "order": 6,
+        "order": 3,
         "id": 23,
-        "prevSize": 32,
-        "code": 59670
+        "prevSize": 32
       },
       "setIdx": 0,
       "setId": 1,
@@ -38,28 +66,14 @@
     "fontPref": {
       "prefix": "icon-",
       "metadata": {
-        "fontFamily": "icomoon",
-        "majorVersion": 1,
-        "minorVersion": 0
+        "fontFamily": "icomoon"
       },
       "metrics": {
         "emSize": 1024,
         "baseline": 6.25,
         "whitespace": 50
       },
-      "embed": false,
-      "ie7": false,
-      "noie8": true,
-      "includeMetadata": true,
-      "cssVars": true,
-      "cssVarsFormat": "scss",
-      "flutter": false,
-      "showSelector": true,
-      "selector": "class",
-      "showMetrics": true,
-      "showMetadata": true,
-      "showVersion": true,
-      "classSelector": ".icon"
+      "embed": false
     },
     "imagePref": {
       "prefix": "icon-",
@@ -69,16 +83,10 @@
       "bgColor": 16777215,
       "classSelector": ".icon",
       "name": "icomoon",
-      "height": 24,
+      "height": 32,
       "columns": 16,
       "margin": 16,
-      "numPrefix": true,
-      "minifyJs": true,
-      "overrideSize": true,
-      "sprite": false,
-      "addTitleTags": true,
-      "pdf": true,
-      "polymer": true
+      "minifyJs": true
     },
     "historySize": 50,
     "showCodes": true,

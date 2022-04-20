@@ -1,6 +1,5 @@
 import { Component } from '@angular/core';
-import { MatIconRegistry } from '@angular/material/icon';
-import { DomSanitizer } from '@angular/platform-browser';
+import { IconService } from './icon.service';
 import { ThemeService } from './theme.service';
 
 @Component({
@@ -13,34 +12,17 @@ export class AppComponent {
   isDark;
   themeClass;
 
-  constructor(
-    private theme: ThemeService,
-    private icon: MatIconRegistry,
-    private domSanitizer: DomSanitizer
-  ) {
+  constructor(private theme: ThemeService, private iconService: IconService) {
     const { isDark, themeClass } = this.theme.initTheme();
     this.isDark = isDark;
     this.themeClass = themeClass;
 
-    this.loadIcons();
+    this.iconService.init();
   }
 
   changeTheme() {
     const { isDark, themeClass } = this.theme.switchTheme();
     this.isDark = isDark;
     this.themeClass = themeClass;
-  }
-
-  loadIcons() {
-    this.icon
-      .setDefaultFontSetClass('icon-')
-      .addSvgIcon(
-        'pacman',
-        this.domSanitizer.bypassSecurityTrustResourceUrl(
-          '../assets/icomoon/SVG/1-pacman.svg'
-        )
-      );
-
-    this.icon.getNamedSvgIcon('pacman').subscribe(console.log);
   }
 }
