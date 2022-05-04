@@ -1,6 +1,8 @@
 @use "sass:map";
 @use "@angular/material" as mat;
 
+@import "../theme";
+
 $color-contast: 800;
 
 $primary: mat.define-palette(mat.$indigo-palette, $color-contast);
@@ -23,55 +25,57 @@ $amber: mat.define-palette(mat.$amber-palette, $color-contast);
 $orange: mat.define-palette(mat.$orange-palette, $color-contast);
 $deep-orange: mat.define-palette(mat.$deep-orange-palette, $color-contast);
 $brown: mat.define-palette(mat.$brown-palette, $color-contast);
+$custom: mat.define-palette($mat-custom, $color-contast);
 
 $my-light-theme: mat.define-light-theme(
-  (
-    color: (
-      primary: $primary,
-      accent: $accent,
-      warn: $warn,
-    ),
-  )
+    (
+        color: (
+            primary: $primary,
+            accent: $accent,
+            warn: $warn,
+        ),
+    )
 );
 
 $my-light-theme: map-merge(
-  $my-light-theme,
-  (
-    color:
-      map-merge(
-        map-get($my-light-theme, color),
-        (
-          _red: $red,
-          _pink: $pink,
-          _purple: $purple,
-          _deep-purple: $deep-purple,
-          _indigo: $indigo,
-          _blue: $blue,
-          _light-blue: $light-blue,
-          _cyan: $cyan,
-          _teal: $teal,
-          _green: $green,
-          _light-green: $light-green,
-          _lime: $lime,
-          _amber: $amber,
-          _orange: $orange,
-          _deep-orange: $deep-orange,
-          _brown: $brown,
-        )
-      ),
-    foreground:
-      map-merge(
-        mat.$light-theme-foreground-palette,
-        (
-          text: #303030,
-        )
-      ),
-    background:
-      map-merge(
-        mat.$light-theme-background-palette,
-        (
-          background: white,
-        )
-      ),
-  )
+    $my-light-theme,
+    (
+        color:
+            map-merge(
+                map-get($my-light-theme, color),
+                (
+                    _red: $red,
+                    _pink: $pink,
+                    _purple: $purple,
+                    _deep-purple: $deep-purple,
+                    _indigo: $indigo,
+                    _blue: $blue,
+                    _light-blue: $light-blue,
+                    _cyan: $cyan,
+                    _teal: $teal,
+                    _green: $green,
+                    _light-green: $light-green,
+                    _lime: $lime,
+                    _amber: $amber,
+                    _orange: $orange,
+                    _deep-orange: $deep-orange,
+                    _brown: $brown,
+                    _custom: $custom,
+                )
+            ),
+        foreground:
+            map-merge(
+                mat.$light-theme-foreground-palette,
+                (
+                    text: #303030,
+                )
+            ),
+        background:
+            map-merge(
+                mat.$light-theme-background-palette,
+                (
+                    background: white,
+                )
+            ),
+    )
 );

@@ -1,0 +1,53 @@
+@import "~@angular/material/theming";
+@include mat-core();
+
+$mat-custom: (
+    // uncomment if you want to generate theme programly
+    // 50: var(--c-color-50),
+    // 100: var(--c-color-100),
+    // 200: var(--c-color-200),
+    // 300: var(--c-color-300),
+    // 400: var(--c-color-400),
+    // 500: var(--c-color-500),
+    // 600: var(--c-color-600),
+    // 700: var(--c-color-700),
+    // 800: var(--c-color-800),
+    // 900: var(--c-color-900),
+    // A100: var(--c-color-100),
+    // A200: var(--c-color-A200),
+    // A400: var(--c-color-A400),
+    // A700: var(--c-color-A700),
+    // comment if you want to generate theme programly
+    50: var(--c-color),
+    100: var(--c-color),
+    200: var(--c-color),
+    300: var(--c-color),
+    400: var(--c-color),
+    500: var(--c-color),
+    600: var(--c-color),
+    700: var(--c-color),
+    800: var(--c-color),
+    900: var(--c-color),
+    A100: var(--c-color),
+    A200: var(--c-color),
+    A400: var(--c-color),
+    A700: var(--c-color),
+    contrast: (
+        50: #000000,
+        100: #000000,
+        200: #000000,
+        300: #000000,
+        400: #000000,
+        500: #000000,
+        600: #000000,
+        700: #000000,
+        800: #000000,
+        900: #000000,
+        A100: #000000,
+        A200: #000000,
+        A400: #000000,
+        A700: #000000,
+    )
+);
+
+$mat-custom: mat-palette($mat-custom);

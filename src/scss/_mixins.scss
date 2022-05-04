@@ -4,84 +4,86 @@
 @use "@angular/material" as mat;
 
 @mixin main($theme) {
-  $color: mat.get-color-from-palette($theme, color);
-  $primary: mat.get-color-from-palette($color, primary);
-  $accent: mat.get-color-from-palette($color, accent);
-  $warn: mat.get-color-from-palette($color, warn);
+    $color: mat.get-color-from-palette($theme, color);
+    $primary: mat.get-color-from-palette($color, primary);
+    $accent: mat.get-color-from-palette($color, accent);
+    $warn: mat.get-color-from-palette($color, warn);
 
-  $red: mat.get-color-from-palette($color, _red);
-  $pink: mat.get-color-from-palette($color, _pink);
-  $purple: mat.get-color-from-palette($color, _purple);
-  $deep-purple: mat.get-color-from-palette($color, _deep-purple);
-  $indigo: mat.get-color-from-palette($color, _indigo);
-  $blue: mat.get-color-from-palette($color, _blue);
-  $light-blue: mat.get-color-from-palette($color, _light-blue);
-  $cyan: mat.get-color-from-palette($color, _cyan);
-  $teal: mat.get-color-from-palette($color, _teal);
-  $green: mat.get-color-from-palette($color, _green);
-  $light-green: mat.get-color-from-palette($color, _light-green);
-  $lime: mat.get-color-from-palette($color, _lime);
-  $amber: mat.get-color-from-palette($color, _amber);
-  $orange: mat.get-color-from-palette($color, _orange);
-  $deep-orange: mat.get-color-from-palette($color, _deep-orange);
-  $brown: mat.get-color-from-palette($color, _brown);
+    $red: mat.get-color-from-palette($color, _red);
+    $pink: mat.get-color-from-palette($color, _pink);
+    $purple: mat.get-color-from-palette($color, _purple);
+    $deep-purple: mat.get-color-from-palette($color, _deep-purple);
+    $indigo: mat.get-color-from-palette($color, _indigo);
+    $blue: mat.get-color-from-palette($color, _blue);
+    $light-blue: mat.get-color-from-palette($color, _light-blue);
+    $cyan: mat.get-color-from-palette($color, _cyan);
+    $teal: mat.get-color-from-palette($color, _teal);
+    $green: mat.get-color-from-palette($color, _green);
+    $light-green: mat.get-color-from-palette($color, _light-green);
+    $lime: mat.get-color-from-palette($color, _lime);
+    $amber: mat.get-color-from-palette($color, _amber);
+    $orange: mat.get-color-from-palette($color, _orange);
+    $deep-orange: mat.get-color-from-palette($color, _deep-orange);
+    $brown: mat.get-color-from-palette($color, _brown);
+    $custom: mat.get-color-from-palette($color, _custom);
 
-  $foreground: map.get($theme, foreground);
-  $foreground: mat.get-color-from-palette($foreground, text);
+    $foreground: map.get($theme, foreground);
+    $foreground: mat.get-color-from-palette($foreground, text);
 
-  $background: map.get($theme, background);
-  $background: mat.get-color-from-palette($background, background);
+    $background: map.get($theme, background);
+    $background: mat.get-color-from-palette($background, background);
 
-  background-color: $background;
-  color: $foreground;
+    background-color: $background;
+    color: $foreground;
 
-  $colors: (
-    red: mat-color($red),
-    pink: mat-color($pink),
-    purple: mat-color($purple),
-    deep-purple: mat-color($deep-purple),
-    indigo: mat-color($indigo),
-    blue: mat-color($blue),
-    light-blue: mat-color($light-blue),
-    cyan: mat-color($cyan),
-    teal: mat-color($teal),
-    green: mat-color($green),
-    light-green: mat-color($light-green),
-    lime: mat-color($lime),
-    amber: mat-color($amber),
-    orange: mat-color($orange),
-    deep-orange: mat-color($deep-orange),
-    brown: mat-color($brown),
-  );
+    $colors: (
+        red: mat-color($red),
+        pink: mat-color($pink),
+        purple: mat-color($purple),
+        deep-purple: mat-color($deep-purple),
+        indigo: mat-color($indigo),
+        blue: mat-color($blue),
+        light-blue: mat-color($light-blue),
+        cyan: mat-color($cyan),
+        teal: mat-color($teal),
+        green: mat-color($green),
+        light-green: mat-color($light-green),
+        lime: mat-color($lime),
+        amber: mat-color($amber),
+        orange: mat-color($orange),
+        deep-orange: mat-color($deep-orange),
+        brown: mat-color($brown),
+        custom: mat-color($custom),
+    );
 
-  @each $c, $v in $colors {
-    .mat-#{$c} {
-      &.mat-raised-button {
-        background-color: $v;
-        color: $background;
-      }
+    @each $c, $v in $colors {
+        .mat-#{$c} {
+            &.mat-raised-button {
+                background-color: $v;
+                color: $background;
+            }
 
-      &.mat-stroked-button {
-        color: $v;
-      }
+            &.mat-stroked-button {
+                color: $v;
+            }
 
-      &.mat-stroked-button {
-        border-color: rgba($v, 0.12);
-      }
+            &.mat-stroked-button {
+                border-color: rgba($v, 0.12);
+            }
 
-      &.mat-button {
-        color: $v;
-      }
+            &.mat-button {
+                color: $v;
+            }
 
-      &.mat-slide-toggle.mat-checked {
-        .mat-slide-toggle-bar {
-          background: rgba($v, 0.54);
+            &.mat-slide-toggle.mat-checked {
+                .mat-slide-toggle-bar {
+                    background: rgba($v, 0.54);
+                }
+
+                .mat-slide-toggle-thumb {
+                    background-color: $v;
+                }
+            }
         }
-
-        .mat-slide-toggle-thumb {
-          background-color: $v;
-        }
-      }
     }
-  }
 }

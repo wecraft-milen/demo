@@ -17,22 +17,26 @@
 @include mat-core();
 
 @mixin themes($theme) {
-  @include angular-material-theme($theme);
-  @include main($theme);
+    @include angular-material-theme($theme);
+    @include main($theme);
+}
+
+:root {
+    --c-color: coral;
 }
 
 .light-theme {
-  @include themes($my-light-theme);
+    @include themes($my-light-theme);
 }
 .dark-theme {
-  @include themes($my-dark-theme);
+    @include themes($my-dark-theme);
 }
 
 html,
 body {
-  height: 100%;
+    height: 100%;
 }
 body {
-  margin: 0;
-  font-family: "icomoon" !important;
+    margin: 0;
+    font-family: "icomoon" !important;
 }

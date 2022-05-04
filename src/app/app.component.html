@@ -1,104 +1,105 @@
 <div>
-  <button mat-raised-button (click)="changeTheme()">{{isDark ? 'dark' : 'light'}}</button>
-  <hr>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <button mat-raised-button>Basic</button>
-    <button mat-raised-button color="primary">primary</button>
-    <button mat-raised-button color="accent">accent</button>
-    <button mat-raised-button color="warn">warn</button>
-    <button mat-raised-button color="red">red</button>
-    <button mat-raised-button color="pink">pink</button>
-    <button mat-raised-button color="purple">purple</button>
-    <button mat-raised-button color="deep-purple">deep-purple</button>
-    <button mat-raised-button color="indigo">indigo</button>
-    <button mat-raised-button color="blue">blue</button>
-    <button mat-raised-button color="light-blue">light-blue</button>
-    <button mat-raised-button color="cyan">cyan</button>
-    <button mat-raised-button color="teal">teal</button>
-    <button mat-raised-button color="green">green</button>
-    <button mat-raised-button color="light-green">light-green</button>
-    <button mat-raised-button color="lime">lime</button>
-    <button mat-raised-button color="amber">amber</button>
-    <button mat-raised-button color="orange">orange</button>
-    <button mat-raised-button color="deep-orange">deep-orange</button>
-    <button mat-raised-button color="brown">brown</button>
-    <button mat-raised-button color="brown" disabled>disabled</button>
-  </div>
-  <hr>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <button mat-button>Basic</button>
-    <button mat-button color="primary">primary</button>
-    <button mat-button color="accent">accent</button>
-    <button mat-button color="warn">warn</button>
-    <button mat-button color="red">red</button>
-    <button mat-button color="pink">pink</button>
-    <button mat-button color="purple">purple</button>
-    <button mat-button color="deep-purple">deep-purple</button>
-    <button mat-button color="indigo">indigo</button>
-    <button mat-button color="blue">blue</button>
-    <button mat-button color="light-blue">light-blue</button>
-    <button mat-button color="cyan">cyan</button>
-    <button mat-button color="teal">teal</button>
-    <button mat-button color="green">green</button>
-    <button mat-button color="light-green">light-green</button>
-    <button mat-button color="lime">lime</button>
-    <button mat-button color="amber">amber</button>
-    <button mat-button color="orange">orange</button>
-    <button mat-button color="deep-orange">deep-orange</button>
-    <button mat-button color="brown">brown</button>
-    <button mat-button color="brown" disabled>disabled</button>
-  </div>
-  <hr>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <mat-slide-toggle color="primary" checked="true">primary</mat-slide-toggle>
-    <mat-slide-toggle color="accent" checked="true">accent</mat-slide-toggle>
-    <mat-slide-toggle color="warn" checked="true">warn</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="red">red</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="pink">pink</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="purple">purple</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="deep-purple">deep-purple</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="indigo">indigo</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="blue">blue</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="light-blue">light-blue</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="cyan">cyan</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="teal">teal</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="green">green</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="light-green">light-green</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="lime">lime</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="amber">amber</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="orange">orange</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="deep-orange">deep-orange</mat-slide-toggle>
-    <mat-slide-toggle checked="true" color="brown">brown</mat-slide-toggle>
-    <mat-slide-toggle disabled="true" checked="true" color="brown">disabled</mat-slide-toggle>
-  </div>
-  <hr>
-  <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
-    <button mat-stroked-button>Basic</button>
-    <button mat-stroked-button color="primary">primary</button>
-    <button mat-stroked-button color="accent">accent</button>
-    <button mat-stroked-button color="warn">warn</button>
-    <button mat-stroked-button color="red">red</button>
-    <button mat-stroked-button color="pink">pink</button>
-    <button mat-stroked-button color="purple">purple</button>
-    <button mat-stroked-button color="deep-purple">deep-purple</button>
-    <button mat-stroked-button color="indigo">indigo</button>
-    <button mat-stroked-button color="blue">blue</button>
-    <button mat-stroked-button color="light-blue">light-blue</button>
-    <button mat-stroked-button color="cyan">cyan</button>
-    <button mat-stroked-button color="teal">teal</button>
-    <button mat-stroked-button color="green">green</button>
-    <button mat-stroked-button color="light-green">light-green</button>
-    <button mat-stroked-button color="lime">lime</button>
-    <button mat-stroked-button color="amber">amber</button>
-    <button mat-stroked-button color="orange">orange</button>
-    <button mat-stroked-button color="deep-orange">deep-orange</button>
-    <button mat-stroked-button color="brown">brown</button>
-    <button mat-stroked-button color="brown" disabled>disabled</button>
-  </div>
-  <hr>
-  <div style="display: flex; align-items: center; justify-content: space-evenly; flex-direction: row; flex-wrap: wrap;">
-    <mat-icon svgIcon="pacman"></mat-icon>
-    <mat-icon svgIcon="headphones"></mat-icon>
-  </div>
+    <button mat-raised-button (click)="changeTheme()">{{isDark ? 'dark' : 'light'}}</button>
+    <hr>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <button mat-raised-button>Basic</button>
+        <button mat-raised-button color="primary">primary</button>
+        <button mat-raised-button color="accent">accent</button>
+        <button mat-raised-button color="warn">warn</button>
+        <button mat-raised-button color="red">red</button>
+        <button mat-raised-button color="pink">pink</button>
+        <button mat-raised-button color="purple">purple</button>
+        <button mat-raised-button color="deep-purple">deep-purple</button>
+        <button mat-raised-button color="indigo">indigo</button>
+        <button mat-raised-button color="blue">blue</button>
+        <button mat-raised-button color="light-blue">light-blue</button>
+        <button mat-raised-button color="cyan">cyan</button>
+        <button mat-raised-button color="teal">teal</button>
+        <button mat-raised-button color="green">green</button>
+        <button mat-raised-button color="light-green">light-green</button>
+        <button mat-raised-button color="lime">lime</button>
+        <button mat-raised-button color="amber">amber</button>
+        <button mat-raised-button color="orange">orange</button>
+        <button mat-raised-button color="deep-orange">deep-orange</button>
+        <button mat-raised-button color="brown">brown</button>
+        <button mat-raised-button color="custom">custom</button>
+        <button mat-raised-button color="brown" disabled>disabled</button>
+    </div>
+    <hr>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <button mat-button>Basic</button>
+        <button mat-button color="primary">primary</button>
+        <button mat-button color="accent">accent</button>
+        <button mat-button color="warn">warn</button>
+        <button mat-button color="red">red</button>
+        <button mat-button color="pink">pink</button>
+        <button mat-button color="purple">purple</button>
+        <button mat-button color="deep-purple">deep-purple</button>
+        <button mat-button color="indigo">indigo</button>
+        <button mat-button color="blue">blue</button>
+        <button mat-button color="light-blue">light-blue</button>
+        <button mat-button color="cyan">cyan</button>
+        <button mat-button color="teal">teal</button>
+        <button mat-button color="green">green</button>
+        <button mat-button color="light-green">light-green</button>
+        <button mat-button color="lime">lime</button>
+        <button mat-button color="amber">amber</button>
+        <button mat-button color="orange">orange</button>
+        <button mat-button color="deep-orange">deep-orange</button>
+        <button mat-button color="brown">brown</button>
+        <button mat-button color="brown" disabled>disabled</button>
+    </div>
+    <hr>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <mat-slide-toggle color="primary" checked="true">primary</mat-slide-toggle>
+        <mat-slide-toggle color="accent" checked="true">accent</mat-slide-toggle>
+        <mat-slide-toggle color="warn" checked="true">warn</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="red">red</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="pink">pink</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="purple">purple</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="deep-purple">deep-purple</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="indigo">indigo</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="blue">blue</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="light-blue">light-blue</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="cyan">cyan</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="teal">teal</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="green">green</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="light-green">light-green</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="lime">lime</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="amber">amber</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="orange">orange</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="deep-orange">deep-orange</mat-slide-toggle>
+        <mat-slide-toggle checked="true" color="brown">brown</mat-slide-toggle>
+        <mat-slide-toggle disabled="true" checked="true" color="brown">disabled</mat-slide-toggle>
+    </div>
+    <hr>
+    <div style="display: flex; flex-wrap: wrap; justify-content: space-around;">
+        <button mat-stroked-button>Basic</button>
+        <button mat-stroked-button color="primary">primary</button>
+        <button mat-stroked-button color="accent">accent</button>
+        <button mat-stroked-button color="warn">warn</button>
+        <button mat-stroked-button color="red">red</button>
+        <button mat-stroked-button color="pink">pink</button>
+        <button mat-stroked-button color="purple">purple</button>
+        <button mat-stroked-button color="deep-purple">deep-purple</button>
+        <button mat-stroked-button color="indigo">indigo</button>
+        <button mat-stroked-button color="blue">blue</button>
+        <button mat-stroked-button color="light-blue">light-blue</button>
+        <button mat-stroked-button color="cyan">cyan</button>
+        <button mat-stroked-button color="teal">teal</button>
+        <button mat-stroked-button color="green">green</button>
+        <button mat-stroked-button color="light-green">light-green</button>
+        <button mat-stroked-button color="lime">lime</button>
+        <button mat-stroked-button color="amber">amber</button>
+        <button mat-stroked-button color="orange">orange</button>
+        <button mat-stroked-button color="deep-orange">deep-orange</button>
+        <button mat-stroked-button color="brown">brown</button>
+        <button mat-stroked-button color="brown" disabled>disabled</button>
+    </div>
+    <hr>
+    <div style="display: flex; align-items: center; justify-content: space-evenly; flex-direction: row; flex-wrap: wrap;">
+        <mat-icon svgIcon="pacman"></mat-icon>
+        <mat-icon svgIcon="headphones"></mat-icon>
+    </div>
 
 </div>
