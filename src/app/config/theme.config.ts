@@ -1,3 +1,3 @@
 export const themeConfig = {
-    "--c-color": `#00FF7F`,
+    "--c-color": `springgreen`,
 };

@@ -45,8 +45,7 @@ export class ThemeService {
         const body = this.document.body;
 
         Object.entries(themeConfig).forEach(([k, v]) => {
-            // this.generateThemeByColor(v);
-            this.rootStyle.style.setProperty(k, v);
+            this.generateThemeByColor(v);
         });
 
         if (theme) {
@@ -81,10 +80,11 @@ export class ThemeService {
         for (const color of colorPalette) {
             const key1 = `--c-color-${color.name}`;
             const value1 = color.hex;
+            this.rootStyle.style.setProperty(key1, value1);
+
             // const key2 = `--c-color-contrast-${color.name}`;
-            const value2 = color.darkContrast ? "rgba(black, 0.87)" : "white";
-            document.documentElement.style.setProperty(key1, value1);
-            // document.documentElement.style.setProperty(key2, value2);
+            // const value2 = color.darkContrast ? "rgba(black, 0.87)" : "white";
+            // this.rootStyle.style.setProperty(key2, value2);
         }
     }
 
